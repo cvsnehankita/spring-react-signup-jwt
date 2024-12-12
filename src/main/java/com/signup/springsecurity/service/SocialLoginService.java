@@ -1,15 +1,6 @@
 package com.signup.springsecurity.service;
 
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.jackson2.JacksonFactory;
 import org.springframework.stereotype.Service;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import java.io.IOException;
-import java.security.GeneralSecurityException;
-import java.util.Collections;
-
-
 @Service
 public class SocialLoginService {
    /* public String authenticateUser(String token) {

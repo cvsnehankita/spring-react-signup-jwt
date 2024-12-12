@@ -2,6 +2,7 @@ package com.signup.springsecurity.controller;
 
 
 import com.signup.springsecurity.entity.JwtResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.signup.springsecurity.entity.User;
@@ -10,8 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.signup.springsecurity.util.JwtTokenProvider;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
@@ -22,6 +21,9 @@ public class AuthController {
 
     @Autowired
     private JwtTokenProvider tokenProvider;
+
+    @Value("${PORT:8080}")
+    private int port;
 
     @PostMapping("/signin")
     public ResponseEntity<?> signIn(@RequestBody User user) {
@@ -37,5 +39,10 @@ public class AuthController {
     public ResponseEntity<?> signUp(@RequestBody User user) {
         userService.saveUser(user);
         return ResponseEntity.ok("User created successfully");
+    }
+
+    @GetMapping("/port")
+    public String getPort() {
+        return "The application is running on port: " + port;
     }
 }

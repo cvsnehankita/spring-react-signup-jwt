@@ -1,6 +1,5 @@
 package com.signup.springsecurity.entity;
 
-
 public class SocialLoginRequest {
     private String token;
 

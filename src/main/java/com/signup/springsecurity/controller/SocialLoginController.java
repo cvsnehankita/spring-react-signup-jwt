@@ -1,16 +1,12 @@
 package com.signup.springsecurity.controller;
 
-import com.signup.springsecurity.entity.JwtResponse;
-import com.signup.springsecurity.entity.SocialLoginRequest;
 import com.signup.springsecurity.service.SocialLoginService;
 import com.signup.springsecurity.util.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "http://localhost:3000")
 public class SocialLoginController {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;

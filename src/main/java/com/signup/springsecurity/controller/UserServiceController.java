@@ -16,7 +16,6 @@ import java.util.List;
 public class UserServiceController {
     @Autowired
     private UserService userService;
-
     @Autowired
     private JwtTokenProvider tokenProvider;
 
