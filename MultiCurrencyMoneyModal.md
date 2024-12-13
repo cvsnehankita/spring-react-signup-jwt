@@ -20,10 +20,10 @@ Converted Amount = Amount * Exchange Rate
 
 ### Implementation
 Please refer below implementation from package moneyModal.
-1. MoneyModalImpl
+1. org/moneyModal/MoneyModalImpl.java
 
 ### Example
-USD (US Dollar) ->  EUR (Euro)	with exchange rate of 0.85 for amount of 100 USD is 85 EUR.
+USD (US Dollar) ->  EUR (Euro) with exchange rate of 0.85 for amount of 100 USD is 85 EUR.
 
 ### Detailed Overview
 
