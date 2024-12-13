@@ -7,6 +7,16 @@ Sign-in functionality to authenticate users and issue JWTs.
 JWS (JSON Web Signature) for signing JWTs.
 JSE (JSON Web Encryption) for encrypting the JWTs, ensuring data confidentiality.
 
+
+### API Details
+1. SignUp: Allows users to register application by providing email, username and password. Passwords encrypted, before storing into database.
+2. SignIn: Users authentication, with their username and password, on success this api returned the JWT token.
+3. Users: Fetch all registered user details.
+4. Heath: To verify if application is up and running.
+
+Please check the ***Postman/Jwt_Backend_Api.postman_collection*** for api testing.
+
+
 ### Technologies Used
 Spring Boot (for backend)
 Maven (for Dependency management)
@@ -17,11 +27,10 @@ JSE (JSON Web Encryption) for encrypting tokens
 H2 Database (for local development)
 Spring Data JPA (for data persistence)
 
-### API Details
-1. SignUp: Allows users to register application by providing email, username and password.Passwords encrypted, before storing into database.
-2. SignIn: Users authentication, with their username and password, on success this api returned the JWT token.
-3. Users: Fetch all registered user details.
-4. Heath: To verify if application is up and running.
+### Deployment Platforms and Google login platform
+1. Heroku is used for Backend deployment, ("https://dashboard.heroku.com")
+2. Netlify is used for Frontend deployment, ("https://app.netlify.com")
+3. Google Authentication, ("https://console.cloud.google.com")
 
 ### API Url: Local Env
 *Local: Backend*
